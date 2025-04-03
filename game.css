@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color: #f44336;
+  --primary-color: #2600ff;
 }
 body {
   margin: 0;
@@ -17,8 +17,8 @@ h1 {
 }
 .guess-game {
   text-align: center;
-  width: 1000px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 20px auto 80px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -41,16 +41,16 @@ h1 {
       }
       input {
         margin: 0 5px;
-        width: 60px;
-        height: 60px;
+        /* max-width: 60px; */
+        /* height: 60px; */
         text-align: center;
-        font-size: 50px;
+        /* font-size: 50px; */
         caret-color: var(--primary-color);
         background: white;
         border: none;
-        border-bottom: 3px solid #333;
+        border-bottom: 3px solid #747474;
         &:focus {
-          outline-color: #ccc;
+          outline-color: #d61b1bbb;
         }
         &.yes-in-place {
           background-color: #f89e13;
@@ -73,7 +73,7 @@ h1 {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 500px;
+      max-width: 500px;
       margin: 30px auto;
       gap: 10px;
       .check {
@@ -81,7 +81,7 @@ h1 {
         flex: 1;
       }
       .hint {
-        background-color: #009688;
+        background-color: #1eda1e;
         width: fit-content;
       }
       button {
@@ -113,13 +113,13 @@ h1 {
         border-radius: 50%;
         margin-right: 10px;
         &.in-place {
-          background-color: #f89e13;
+          background-color: #ffd207;
         }
         &.not-in-place {
-          background-color: #18ba89;
+          background-color: #07b966;
         }
         &.no {
-          background-color: #27303f;
+          background-color: #191e27;
         }
       }
       .key-text {
@@ -129,6 +129,7 @@ h1 {
     }
   }
 }
+
 .message {
   text-align: center;
   font-weight: bold;
@@ -154,4 +155,37 @@ footer {
   width: 100%;
   background-color: #333;
   color: white;
+}
+
+@media (min-width: 992px) {
+  .guess-game {
+    .inputs input {
+      font-size: 45px;
+      height: 60px;
+      max-width: 60px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .guess-game {
+    flex-direction: column;
+    align-items: center;
+    .inputs input {
+      width: 40px;
+      height: 50px;
+      font-size: 35px;
+    }
+  }
+}
+@media (max-width: 671px) {
+  .guess-game {
+    .inputs input {
+      width: 40px;
+      height: 50px;
+      font-size: 35px;
+    }
+    .inputs span {
+      font-size: 25px;
+    }
+  }
 }

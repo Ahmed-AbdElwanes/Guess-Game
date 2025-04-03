@@ -4,7 +4,7 @@ document.title = gameName;
 document.querySelector("h1").innerHTML = gameName;
 document.querySelector(
   "footer"
-).innerHTML = `${gameName} Game Created By Elzero Web School`;
+).innerHTML = `${gameName} Game Created By Ahmed Abdel-Wanis`;
 
 // Setting Game Options
 let numbersOfTries = 6;
@@ -26,7 +26,10 @@ const words = [
   "very",
   "happy",
   "mohamed",
-  "nile"
+  "nile",
+  "wall",
+  "line",
+  "guess"
 ];
 wordToGuess = words[Math.floor(Math.random() * words.length)].toLowerCase();
 let messageArea = document.querySelector(".message");
